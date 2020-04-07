@@ -5,7 +5,21 @@
       "name": "mytimer",
       "type": "timerTrigger",
       "direction": "in",
-      "schedule": "0 */1 * * * *"
+      "schedule": "0 0 6 * * *"
+    },
+    {
+      "name": "inputblob",
+      "type": "blob",
+      "path": "express-entry-rounds/last_draw",
+      "connection": "AzureWebJobsStorage",
+      "direction": "in"
+    },
+    {
+      "name": "outputblob",
+      "type": "blob",
+      "path": "express-entry-rounds/last_draw",
+      "connection": "AzureWebJobsStorage",
+      "direction": "out"
     }
   ]
 }
